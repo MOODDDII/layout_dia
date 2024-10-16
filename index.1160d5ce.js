@@ -1,0 +1,2 @@
+const e=document.querySelector("body"),n=document.getElementById("menu-btn"),t=document.getElementById("menu"),o=document.querySelectorAll(".phone-menu_list_link");n.addEventListener("click",function(){t.classList.add("phone-menu--visible"),e.style.overflow="hidden"}),o.forEach(n=>{n.addEventListener("click",function(){t.classList.remove("phone-menu--visible"),e.style.overflow=""})});
+//# sourceMappingURL=index.1160d5ce.js.map
