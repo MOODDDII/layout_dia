@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Strategic Agency</title>
+    <title>Dia</title>
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -23,23 +23,30 @@
   </head>
   <body>
     <div class="phone-menu" id="menu">
-      <ul class="phone-menu_list">
-        <li class="phone-menu_list_item">
-          <a href="#" class="phone-menu_list_link">About us</a>
-        </li>
-        <li class="phone-menu_list_item">
-          <a href="#" class="phone-menu_list_link">Home</a>
-        </li>
-        <li class="phone-menu_list_item">
-          <a href="#" class="phone-menu_list_link">Work</a>
-        </li>
-        <li class="phone-menu_list_item">
-          <a href="#" class="phone-menu_list_link">Services</a>
-        </li>
-        <li class="phone-menu_list_item">
-          <a href="#" class="phone-menu_list_link">Contact us</a>
-        </li>
-      </ul>
+      <nav>
+        <ul class="phone-menu_list">
+          <li class="phone-menu_list_item">
+            <a href="#" class="phone-menu_list_link">About us</a>
+          </li>
+          <li class="phone-menu_list_item">
+            <a href="#" class="phone-menu_list_link">Home</a>
+          </li>
+          <li class="phone-menu_list_item">
+            <a href="#" class="phone-menu_list_link">Work</a>
+          </li>
+          <li class="phone-menu_list_item">
+            <a href="#" class="phone-menu_list_link">Services</a>
+          </li>
+          <li class="phone-menu_list_item">
+            <a href="#" class="phone-menu_list_link">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="close-menu" id="close-menu">
+        <span class="close-menu_stick"></span>
+        <span class="close-menu_stick"></span>
+      </div>
     </div>
 
     <header class="header">
@@ -416,7 +423,11 @@
               <a href="tel: 654321987" class="contact-us_wrapper_text">654 321 987</a>
 
               <h4 class="contact-us_wrapper_title-small">Visit us</h4>
-              <a href="https://maps.app.goo.gl/STY5uouvQSK8Hqaz9" class="contact-us_wrapper_text">2905 West Drive, Buffalo Grove</a>
+              <a
+                href="https://maps.app.goo.gl/STY5uouvQSK8Hqaz9"
+                class="contact-us_wrapper_text"
+                target="_blank"
+              >2905 West Drive, Buffalo Grove</a>
 
               <h4 class="contact-us_wrapper_title-small contact-us_wrapper_title-small--socials">Our socials</h4>
               <div class="contact-us_wrapper_images">
@@ -480,6 +491,7 @@
 
     <script src="scripts/main.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/form.js"></script>
     <script src="scripts/slider.js"></script>
   </body>
 </html>

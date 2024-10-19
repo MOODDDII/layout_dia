@@ -25,7 +25,24 @@
       line-height: 36px;
       color: $c-white;
       display: block;
-      padding-bottom: 48px;
+      margin-bottom: 48px;
+      position: relative;
+      width: max-content;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 0;
+        height: 2px;
+        background-color: $c-blue;
+        transition: width $transition ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
     }
 
     &_images {
