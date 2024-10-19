@@ -1,5 +1,3 @@
-'use strict';
-
 const theSlides = document.querySelectorAll('.slider_slide');
 const nextSlideBtns = document.querySelectorAll('.slider_slide_extra_control--right');
 const prevSlideBtns = document.querySelectorAll('.slider_slide_extra_control--left');
