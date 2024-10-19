@@ -19,4 +19,5 @@ links.forEach(link => {
 
 closeMenu.addEventListener('click', function () {
   menu.classList.remove('phone-menu--visible');
+  body.style.overflow = '';
 });
