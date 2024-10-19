@@ -1,44 +1,48 @@
-const theSlides = document.querySelectorAll('.slider_slide');
-const nextSlideBtns = document.querySelectorAll('.slider_slide_extra_control--right');
-const prevSlideBtns = document.querySelectorAll('.slider_slide_extra_control--left');
+(function() {
+  'use strict';
 
-let slideIndex = 0;
-let intervalId = null;
+  const theSlides = document.querySelectorAll('.slider_slide');
+  const nextSlideBtns = document.querySelectorAll('.slider_slide_extra_control--right');
+  const prevSlideBtns = document.querySelectorAll('.slider_slide_extra_control--left');
 
-nextSlideBtns.forEach(button => {
-  button.addEventListener('click', nextSlide);
-});
+  let slideIndex = 0;
+  let intervalId = null;
 
-prevSlideBtns.forEach(button => {
-  button.addEventListener('click', prevSlide);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  theSlides[slideIndex].classList.add('slider_slide--visible');
-  intervalId = setInterval(nextSlide, 5000);
-});
-
-function showSlide(index) {
-  if (index >= theSlides.length) {
-    slideIndex = 0;
-  } else if (index < 0) {
-    slideIndex = theSlides.length - 1;
-  } else {
-    slideIndex = index;
-  }
-
-  theSlides.forEach(slide => {
-    slide.classList.remove('slider_slide--visible');
+  nextSlideBtns.forEach(button => {
+    button.addEventListener('click', nextSlide);
   });
 
-  theSlides[slideIndex].classList.add('slider_slide--visible');
-}
+  prevSlideBtns.forEach(button => {
+    button.addEventListener('click', prevSlide);
+  });
 
-function prevSlide() {
-  showSlide(slideIndex - 1);
-  clearTimeout(intervalId);
-}
+  document.addEventListener('DOMContentLoaded', function () {
+    theSlides[slideIndex].classList.add('slider_slide--visible');
+    intervalId = setInterval(nextSlide, 5000);
+  });
 
-function nextSlide() {
-  showSlide(slideIndex + 1);
-}
+  function showSlide(index) {
+    if (index >= theSlides.length) {
+      slideIndex = 0;
+    } else if (index < 0) {
+      slideIndex = theSlides.length - 1;
+    } else {
+      slideIndex = index;
+    }
+
+    theSlides.forEach(slide => {
+      slide.classList.remove('slider_slide--visible');
+    });
+
+    theSlides[slideIndex].classList.add('slider_slide--visible');
+  }
+
+  function prevSlide() {
+    showSlide(slideIndex - 1);
+    clearTimeout(intervalId);
+  }
+
+  function nextSlide() {
+    showSlide(slideIndex + 1);
+  }
+})();
