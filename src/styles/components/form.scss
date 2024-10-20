@@ -18,12 +18,19 @@
     transition: $transition;
     color: $c-white;
     font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;
+
 
     &:hover {
       border-bottom: 1px solid $c-blue;
     }
 
     &::placeholder {
+      font-size: 15px;
+      line-height: 22.5px;
       color: $c-white;
       opacity: 0.5;
     }

@@ -27,7 +27,7 @@
       display: block;
       margin-bottom: 48px;
       position: relative;
-      width: max-content;
+      width: fit-content;
 
       &::after {
         content: '';
@@ -52,6 +52,11 @@
 
       &_img {
         cursor: pointer;
+        transition: $transition;
+      }
+
+      &_img:hover {
+        transform: scale(1.3);
       }
     }
   }
