@@ -1,0 +1,2 @@
+const e=document.querySelector("body"),n=document.getElementById("menu-btn"),t=document.getElementById("menu"),o=document.querySelectorAll(".phone-menu_list_link"),l=document.getElementById("close-menu");n.addEventListener("click",function(){t.classList.add("phone-menu--visible"),e.style.overflow="hidden"}),o.forEach(n=>{n.addEventListener("click",function(){t.classList.remove("phone-menu--visible"),e.style.overflow=""})}),l.addEventListener("click",function(){t.classList.remove("phone-menu--visible"),e.style.overflow=""});
+//# sourceMappingURL=index.ece5a2d0.js.map
